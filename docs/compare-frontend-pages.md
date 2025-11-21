@@ -19,7 +19,7 @@ This static page (`/compare.html`) demonstrates the Angular component model desc
 - `public/compare.js` handles tray and matrix rendering, mimicking Angular selectors/adapters with plain TypeScript-like logic for quick demos.
 
 ## How to run locally
-Browser module loading blocks `file://` pages for security, which causes the `compare.js` script to be denied with a CORS error. Serve the page over HTTP instead:
+You can now double-click `public/compare.html` because the script uses a classic `defer` loader instead of an ES module. To mimic storefront hosting (and keep relative paths identical to Spartacus), you can still run the mini server:
 
 1. Start the static server with `node server.js` (or `npm start`).
 2. Navigate to `http://localhost:3000/compare.html`.

@@ -18,13 +18,13 @@ This prototype ships a static frontend and a lightweight Node.js backend-for-fro
 
 If the API key is missing or the OpenAI call fails, the UI will render curated fallback data so that the interface remains functional for demos.
 
-## Compare prototype quick start (fixes file:// CORS issue)
+## Compare prototype quick start (now file:// friendly)
 
-Modern browsers block ES module scripts when loaded from the local file system (`file://.../public/compare.html`). Run the lightweight Node server instead so assets load over HTTP:
+The compare prototype script no longer uses the `type="module"` loader, so you can open `public/compare.html` directly from your file system for a quick demo. For a closer match to Spartacus hosting (and to avoid mixed-content console warnings), run the lightweight Node server over HTTP:
 
 1. Install Node 18+.
 2. From the repo root, run `npm start` (or `node server.js`).
-3. Open `http://localhost:3000/compare.html` to use the Siemens Energy compare mock without CORS errors.
+3. Open `http://localhost:3000/compare.html` to use the Siemens Energy compare mock with the same paths and caching headers a storefront would provide.
 
 ### Configuring the OpenAI key
 
