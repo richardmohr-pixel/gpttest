@@ -19,7 +19,9 @@ This static page (`/compare.html`) demonstrates the Angular component model desc
 - `public/compare.js` handles tray and matrix rendering, mimicking Angular selectors/adapters with plain TypeScript-like logic for quick demos.
 
 ## How to run locally
-1. Start the static server with `node server.js`.
+Browser module loading blocks `file://` pages for security, which causes the `compare.js` script to be denied with a CORS error. Serve the page over HTTP instead:
+
+1. Start the static server with `node server.js` (or `npm start`).
 2. Navigate to `http://localhost:3000/compare.html`.
 3. Use **Add to compare** buttons to populate the tray and open the matrix.
 
